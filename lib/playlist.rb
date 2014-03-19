@@ -32,7 +32,7 @@ playlist = PlayList.new(max_storage_in_gb)
 
 ARGF.each_line do |entry|
   fields = entry.split("|")
-  file_size = fields[3].to_i  #bytes -> megabytes
+  file_size = fields[3].to_i
   location = fields[4]
   break unless playlist.add_song(file_size, location) 
 end

@@ -12,10 +12,15 @@ System Requirements
 Usage
 -----
 `
-./plboogie.sh <max_storage_size_in_gb>
+./plboogie.sh <playlist_name> <max_storage_size_in_gb>
+
 `
 
-== Future Features:
+* Defaults: playlist_name => 'plboogie' , max_storage_size_in_gb => 8GB
 
-* Customize track priority criteria  (date added to library, number of times played)
-* Export playlists to Android-based devices
+Future Features:
+---------------
+
+* Customize track priority criteria  (date added to library, number of times played etc)
+* Enforce presence of entire albums on the playlist
+* Export playlists to Android devices

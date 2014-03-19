@@ -1,11 +1,15 @@
 #!/bin/sh
 
-#script args: playlist_name, max_storage
+#Usage ./plboogie.sh <playlist_name> <max_storage_size_in_gb>
 
-echo "Building playlist 'xyz' with max storage of 16GB ...."
-lib/all_tracks.applescript | sort -r -t '|' -k 2 | lib/playlist.rb $1  > /tmp/plboogie_out
+PLAYLIST_NAME="${1:-plboogie}"
+MAX_SIZE="${2:-8}"
 
-#Creating 'xyz' playlist on iTunes ....
+echo "Building playlist with max storage of ${MAX_SIZE} GB ...."
+lib/all_tracks.applescript | sort -r -t '|' -k 2 | lib/playlist.rb $MAX_SIZE  > /tmp/plboogie_out
 
 
-#Done!
+echo "Creating '$PLAYLIST_NAME' playlist on iTunes ...."
+
+
+echo 'Finished!'
