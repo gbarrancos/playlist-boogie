@@ -11,10 +11,7 @@ System Requirements
 
 Usage
 -----
-`
-./plboogie.sh <playlist_name> <max_storage_size_in_gb>
-
-`
+` ./plboogie.sh <playlist_name> <max_storage_size_in_gb> `
 
 * Defaults: playlist_name => 'plboogie' , max_storage_size_in_gb => 8GB
 
