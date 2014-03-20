@@ -8,8 +8,5 @@ MAX_SIZE="${2:-8}"
 echo "Building playlist with max storage of ${MAX_SIZE} GB ...."
 lib/all_tracks.applescript | sort -r -t '|' -k 2 | lib/playlist.rb $MAX_SIZE  > /tmp/plboogie_out
 
-
 echo "Creating '$PLAYLIST_NAME' playlist on iTunes ...."
-
-
-echo 'Finished!'
+lib/create_playlist.sh $PLAYLIST_NAME

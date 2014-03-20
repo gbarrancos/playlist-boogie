@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-#USAGE: ./playlist.rb <maximum storage size>
-
 class PlayList
 
   def initialize(max_size_in_gb)
