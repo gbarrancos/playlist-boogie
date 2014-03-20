@@ -1,7 +1,9 @@
 #!/bin/sh
 
+#Usage ./create_playlist.sh <playlist_name> <source tracklist path>
+
 /usr/bin/osascript <<EOF
-set trackList to read POSIX file "/tmp/plboogie_out" as «class utf8» using delimiter linefeed
+set trackList to read POSIX file "$2" as «class utf8» using delimiter linefeed
 set errors to {}
 
 tell application "iTunes"
@@ -19,5 +21,3 @@ end tell
 return errors
 
 EOF
-
-rm -f /tmp/plboogie_out
