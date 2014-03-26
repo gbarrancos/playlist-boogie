@@ -7,19 +7,25 @@ System Requirements
 -------------------
 
  * OS X 10.8 or higher
- * Ruby 1.9 or higher
+ * Python 2.6 or higher
 
 Usage
 -----
-` ./plboogie.sh <playlist_name> <max_storage_size_in_gb> `
+`plboogie [-h] [--priority {newest,most_listened,least_listened}]
+               [--storage_size STORAGE_SIZE] [--name NAME]
 
-* Defaults:
-  - playlist_name: 'plboogie'
-  - max_storage_size_in_gb => 8GB
+Storage aware iTunes playlist generator
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --priority {newest,most_listened,least_listened}
+                        Track priority criteria (default: newest)
+  --storage_size STORAGE_SIZE
+                        Maximum playlist size in GB (default: 8)
+  --name NAME           iTunes Playlist Name (default: plboogie)`
+
 
 Future Features:
 ---------------
 
-* Customize track priority criteria  (date added to library, number of times played etc)
-* Enforce presence of entire albums on the playlist
 * Export playlists to Android devices

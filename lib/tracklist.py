@@ -27,11 +27,14 @@ tracklist = TrackList(max_storage_in_gb)
 
 #album|date_added_to_library|played_count|size_in_bytes|location
 for track in sys.stdin.readlines():
-    fields = track.rstrip().split("|")
-    file_size = int(fields[3])
-    location = fields[4]
-    if not tracklist.add_song(file_size, location):
-        break
+    try:
+        fields = track.rstrip().split("|")
+        file_size = int(fields[3])
+        location = fields[4]
+        if not tracklist.add_song(file_size, location):
+            break
+    except:
+        sys.stderr.write("Error processing track: " + track)
 
 
 print tracklist
