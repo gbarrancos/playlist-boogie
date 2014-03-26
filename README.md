@@ -11,7 +11,8 @@ System Requirements
 
 Usage
 -----
-` plboogie [-h] [--priority {newest,most_listened,least_listened}]
+
+`plboogie [-h] [--priority {newest,most_listened,least_listened}]
                [--storage_size STORAGE_SIZE] [--name NAME]
 
 Storage aware iTunes playlist generator
@@ -22,7 +23,8 @@ optional arguments:
                         Track priority criteria (default: newest)
   --storage_size STORAGE_SIZE
                         Maximum playlist size in GB (default: 8)
-  --name NAME           iTunes Playlist Name (default: plboogie) `
+  --name NAME           iTunes Playlist Name (default: plboogie)
+`
 
 
 Future Features:
